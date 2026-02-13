@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Untuk Reisya ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgm" loop preload="auto">
+    <source src="Mitski - My Love Mine All Mine.mp3" type="audio/mpeg">
+  </audio>
+
+  <canvas id="sparkle"></canvas>
+
+  <!-- OVERLAY -->
+  <div class="ov" id="overlay">
+    <div class="ov-in">
+      <div class="ov-ico">💌</div>
+      <h2 class="ov-t">Ada yang Spesial Untukmu</h2>
+      <p class="ov-n">— hanya untuk Reisya —</p>
+      <button class="ov-btn" onclick="startPage()">Buka Sekarang ❤️</button>
+      <p class="ov-h">pakai headset biar lebih terasa 🎧</p>
+    </div>
+  </div>
+
+  <!-- MUSIC -->
+  <button class="mu" id="mu" onclick="toggleMusic()"><i>♫</i></button>
+
+  <!-- CONFETTI + SUCCESS -->
+  <div class="cfl" id="cfl"></div>
+  <div class="suc" id="suc">
+    <div class="se">💕</div>
+    <h2 class="sh">Yeay Reisya! 🥰</h2>
+    <p class="ss">Makasih udah mau stay... kamu segalanya ✨</p>
+  </div>
+  
+  <div class="ow-overlay" id="owOverlay" onclick="closeAllCards()"></div>
+
+  <!-- =============== 1. HERO (bg1) =============== -->
+  <section class="ps bg1">
+    <div class="in">
+      <div class="hero">
+        <div class="h-photo" id="hPhoto">
+          <img src="img/foto-1.png" alt="Reisya">
+        </div>
+        <div class="h-badge" id="hBadge">Long Distance Relationship 🌙</div>
+        <h1 id="hTitle">Hai, Reisya...</h1>
+        <p class="h-for" id="hFor">from someone who misses you every day</p>
+        <p class="h-typ" id="hTyp"></p>
+        <div class="sa" id="sArrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 2. LDR COUNTER (bg2) =============== -->
+  <section class="ps bg2">
+    <div class="in">
+      <div class="ldr-s rv">
+        <div class="ldr-c">
+          <div class="li">🌙</div>
+          <h3>Meskipun Jauh, Kita Tetap Dekat</h3>
+          <div class="ldr-row">
+            <div class="ldr-u"><div class="ldr-num" id="ld">0</div><div class="ldr-lab">Hari</div></div>
+            <div class="ldr-u"><div class="ldr-num" id="lh">0</div><div class="ldr-lab">Jam</div></div>
+            <div class="ldr-u"><div class="ldr-num" id="lm">0</div><div class="ldr-lab">Menit</div></div>
+            <div class="ldr-u"><div class="ldr-num" id="ls">0</div><div class="ldr-lab">Detik</div></div>
+          </div>
+          <p class="ldr-msg">"Jarak bukan halangan, karena hati kita selalu terhubung."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 3. GALLERY (bg3) =============== -->
+  <section class="ps bg3">
+    <div class="in">
+      <div class="gal">
+        <h2 class="st rv">Momen Kita 📸</h2>
+        <div class="gc">
+          <img src="img/foto-2.jpeg" alt="Moment 1">
+          <div class="gc-t">
+            <h3>Senyummu</h3>
+            <p>Melihatmu tersenyum, meski hanya lewat layar, tetap jadi bagian terbaik dari hariku.</p>
+          </div>
+        </div>
+        <div class="gc">
+          <img src="img/foto-3.jpeg" alt="Moment 2">
+          <div class="gc-t">
+            <h3>Kita</h3>
+            <p>Terima kasih sudah bertahan meski jarak memisahkan. Kamu selalu ada di hatiku.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 4. REASONS CAROUSEL (bg4) =============== -->
+  <section class="ps bg4">
+    <div class="in">
+      <div class="rs rv">
+        <h2 class="st">Alasan Aku Sayang Kamu 💗</h2>
+        <div class="r-car" id="rCar">
+          <div class="r-trk" id="rTrk">
+            <div class="r-sl"><div class="r-num">#1</div><p class="r-txt">Karena kamu selalu tau cara bikin aku senyum, bahkan di hari terburuk sekalipun.</p></div>
+            <div class="r-sl"><div class="r-num">#2</div><p class="r-txt">Karena kamu sabar sama aku yang kadang moody dan banyak maunya.</p></div>
+            <div class="r-sl"><div class="r-num">#3</div><p class="r-txt">Karena suaramu lewat telepon tengah malam sudah jadi lagu tidur favorit aku.</p></div>
+            <div class="r-sl"><div class="r-num">#4</div><p class="r-txt">Karena meskipun jauh, kamu selalu bikin aku merasa dicintai setiap hari.</p></div>
+            <div class="r-sl"><div class="r-num">#5</div><p class="r-txt">Karena kamu adalah alasan aku percaya bahwa jarak bukan penghalang untuk cinta yang nyata.</p></div>
+          </div>
+        </div>
+        <div class="r-dots" id="rDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 5. OPEN WHEN CARDS (bg5) - NEW =============== -->
+  <section class="ps bg5">
+    <div class="in">
+      <div class="open-section rv">
+        <h2 class="st">Buka Saat Kamu... 💌</h2>
+        <div class="ow-grid">
+          <div class="ow-card" onclick="openCard('miss')">
+            <div class="ow-cover">🥺<br>Lagi Kangen</div>
+          </div>
+          <div class="ow-card" onclick="openCard('sad')">
+            <div class="ow-cover">😢<br>Lagi Sedih</div>
+          </div>
+          <div class="ow-card" onclick="openCard('happy')">
+            <div class="ow-cover">🥰<br>Lagi Seneng</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modals for Open When -->
+      <div class="ow-content" id="ow-miss">
+        <span class="ow-close" onclick="closeAllCards()">×</span>
+        <h3>Saat Rindu...</h3>
+        <p>Peluk gulingnya yang erat ya? Bayangin itu aku. Inget, jarak ini cuma sementara. Hatiku selalu di situ sama kamu. ❤️</p>
+      </div>
+      <div class="ow-content" id="ow-sad">
+        <span class="ow-close" onclick="closeAllCards()">×</span>
+        <h3>Jangan Sedih...</h3>
+        <p>Hapus air matanya cantik. Kamu kuat, kamu hebat. Kalau hari ini berat, cerita sama aku ya? Aku siap dengerin 24/7. 🤗</p>
+      </div>
+      <div class="ow-content" id="ow-happy">
+        <span class="ow-close" onclick="closeAllCards()">×</span>
+        <h3>Yeay! 🎉</h3>
+        <p>Senyum kamu nular sampe sini tau! Teruslah bahagia ya sayang, karena bahagiamu itu duniaku juga. 💕</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 6. NEXT MEET COUNTDOWN (bg6) - NEW =============== -->
+  <section class="ps bg6">
+    <div class="in">
+      <div class="meet-section rv">
+        <h2 class="st">Menuju Ketemu Kita ✈️</h2>
+        <div class="meet-box">
+          <p class="meet-label">Insyaallah kita ketemu lagi dalam:</p>
+          <div class="meet-count" id="meetCount">Soon...</div>
+          <p class="meet-note">Sabar ya, setiap detiknya mendekatkan aku ke kamu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 7. SECRET MESSAGE (bg7) =============== -->
+  <section class="ps bg7">
+    <div class="in">
+      <div class="secret rv">
+        <h2 class="st">Pesan Rahasia 🤫</h2>
+        <div class="s-box">
+          <div class="s-cover" id="sCover" onclick="revealSecret()">
+            <div class="s-ico">🔒</div>
+            <h3>Tap untuk membuka...</h3>
+            <p>Ada sesuatu yang aku simpan buat kamu</p>
+          </div>
+          <div class="s-msg" id="sMsg">
+            <p>Reisya, kalau kamu baca ini... aku mau kamu tau bahwa di antara jutaan orang di dunia ini, akulah yang paling beruntung karena kamu memilih aku.</p>
+            <p>Kamu bukan cuma pacar. Kamu rumah. Kamu ketenangan di tengah badai. Kamu alasan aku masih bisa tersenyum meski hari ini berat.</p>
+            <p>Aku cinta kamu. Bukan cinta yang biasa. Tapi cinta yang bikin aku mau jadi orang lebih baik setiap harinya. 💕</p>
+            <div class="s-sign">Forever yours ❤️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 8. LOVE QUIZ (bg8) =============== -->
+  <section class="ps bg8">
+    <div class="in">
+      <div class="quiz rv">
+        <h2 class="st">Kuis Cinta 💘</h2>
+        <div class="q-box" id="qBox">
+          <h3>Seberapa Kenal Kamu Sama Aku?</h3>
+          <p class="q-prog" id="qProg"></p>
+          <p class="q-question" id="qQ"></p>
+          <div class="q-opts" id="qOpts"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 9. BUCKET LIST (bg9) =============== -->
+  <section class="ps bg9">
+    <div class="in">
+      <div class="bl rv">
+        <h2 class="st">Bucket List Kita 🌈</h2>
+        <div class="bl-box">
+          <div class="bl-item"><div class="bl-ico">🫂</div><div class="bl-check"></div><div class="bl-label">Peluk kamu erat-erat pas ketemu</div></div>
+          <div class="bl-item"><div class="bl-ico">🍜</div><div class="bl-check"></div><div class="bl-label">Makan bareng di tempat favorit kamu</div></div>
+          <div class="bl-item"><div class="bl-ico">🏖️</div><div class="bl-check"></div><div class="bl-label">Jalan ke pantai bareng</div></div>
+          <div class="bl-item"><div class="bl-ico">🎬</div><div class="bl-check"></div><div class="bl-label">Nonton bioskop sambil pegangan tangan</div></div>
+          <div class="bl-item"><div class="bl-ico">📸</div><div class="bl-check"></div><div class="bl-label">Foto bareng di photobooth</div></div>
+          <div class="bl-item"><div class="bl-ico">🌅</div><div class="bl-check"></div><div class="bl-label">Lihat sunset bareng</div></div>
+          <div class="bl-item"><div class="bl-ico">🛌</div><div class="bl-check"></div><div class="bl-label">Tidur sambil video call tanpa putus</div></div>
+          <div class="bl-item"><div class="bl-ico">💍</div><div class="bl-check"></div><div class="bl-label">...dan suatu hari nanti, gak LDR lagi ❤️</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 10. YAPPING (bg10) =============== -->
+  <section class="ps bg10">
+    <div class="in">
+      <div class="yap rv">
+        <h2 class="st">Curhat dari Hati 💌</h2>
+        <div class="lb">
+          <div class="tape"></div>
+          <div class="ls">
+            <div class="yc">
+              <p>Hai Reisya... 🥺</p>
+              <p>Aku gak tau harus mulai dari mana. Yang aku tau, kamu itu berarti lebih dari apapun. Lebih dari kata-kata yang bisa aku rangkai.</p>
+              <p>Setiap malam sebelum tidur, aku berdoa buat kamu. Supaya kamu sehat, supaya kamu bahagia, supaya suatu hari nanti jarak ini gak lagi jadi penghalang.</p>
+              <p>Aku rindu. Rindu banget. Rindu pelukan yang belum pernah aku kasih. Rindu jalan bareng yang belum pernah kita lakuin. Rindu ketawa bareng tanpa delay sinyal.</p>
+              <p>Tapi aku juga bersyukur. Jarak ini ngajarin aku bahwa cinta itu bukan soal dekat atau jauh. Cinta itu soal pilihan. Dan aku memilih kamu. Setiap hari.</p>
+              <p>Suatu hari nanti, aku bisa peluk kamu tanpa bilang "udah dulu ya, sinyal jelek." Dan hari itu akan jadi hari paling indah dalam hidup aku.</p>
+              <p>Tunggu aku ya, Reisya. ❤️</p>
+              <p class="ys">— Dengan seluruh hatiku 💕</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 11. TYPEWRITER (bg11) =============== -->
+  <section class="ps bg11">
+    <div class="in">
+      <div class="tw" id="twSec">
+        <div class="paper" id="paper">
+          <div id="tw-t"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 12. NIGHT SKY (bg12) =============== -->
+  <section class="ps bg12">
+    <div class="in">
+      <div class="night rv" id="nightSky">
+        <div class="moon">🌙</div>
+        <h2 class="st">Kita Lihat Bulan yang Sama</h2>
+        <p class="night-sub">Meskipun kita beda kota, beda tempat, beda waktu... tapi langit yang kita lihat tetap sama. Dan aku tau, di bawah bulan yang sama, kamu juga sedang memikirkan aku. ✨</p>
+      </div>
+
+      <div class="fin">
+        <h2 class="fin-q" id="finQ">Will you stay with me, Reisya? 💌</h2>
+        <p class="fin-sub" id="finSub">Meskipun jauh... maukah kamu tetap bersamaku?</p>
+        <div class="br">
+          <button class="ba by" onclick="sayYes()">MAU BANGET ❤️</button>
+          <button class="ba bn" id="bNo">Gak mau</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
